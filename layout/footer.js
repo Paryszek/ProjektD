@@ -4,8 +4,8 @@ export default class Footer extends React.Component{
     return(
       <div className="container-fluid">
         <hr /><br />
-        <p style={{fontSize:20}} className="text-center">
-          <b>Autor:</b> The best of the best Mike Paris!
+        <p style={{fontSize:15, color:'grey',}} className="text-center">
+          Stopka
         </p>
       </div>
     )

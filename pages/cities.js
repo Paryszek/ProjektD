@@ -21,12 +21,21 @@ export default class Cities extends React.Component{
   updateSearch(e){
     let search = e.target.value
     this.setState({search})
+
+    if(e.target.value.length>0)
+      this.setState({off: 'block'})
+    else
+      this.setState({off: 'none'})
+
+    //console.log(e.target.value.length);
   }
   render() {
-    const h2Style = {
-      fontSize: '200%',
-      paddingTop: 10,
-      paddingBottom: 20,
+    const input = {
+      fontSize: '150%',
+      padding: 10,
+      marginTop: 30,
+      marginBottom: 30,
+      width: 320
     }
     let filteredCities = data.filter(
     (city) => {
@@ -36,12 +45,11 @@ export default class Cities extends React.Component{
     );
     return (
       <div className="text-center">
-        <h1 style={h2Style}> Gdzie te wszystkie dentysty som?! </h1>
-        <input style={{marginBottom: 30,}} placeholder="Szukaj..." value={this.state.search}  onChange={this.updateSearch.bind(this)} />
+        <input style={input} placeholder="Podaj miasto..." value={this.state.search}  onChange={this.updateSearch.bind(this)} />
         {
             filteredCities.map((x)=>{
               return(
-              <Link to={'/city/' + x.id} key={x.id+1}>
+              <Link style={{display: this.state.off}}  to={'/city/' + x.id} key={x.id+1}>
                 <SingleCity city={x} key={x.id+2} />
               </Link>
                )
