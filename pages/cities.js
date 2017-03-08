@@ -22,7 +22,7 @@ export default class Cities extends React.Component{
     let search = e.target.value
     this.setState({search})
 
-    if(e.target.value.length>0)
+    if(e.target.value.length>1)
       this.setState({off: 'block'})
     else
       this.setState({off: 'none'})
