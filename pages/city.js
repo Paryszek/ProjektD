@@ -37,7 +37,7 @@ export default class City extends React.Component{
               <div className="btn-group" className="text-center" data-toggle="buttons">
                   <button className="btn btn-primary">Stomatologia zachowawcza</button>
                   <button className="btn btn-warning">Endodoncja</button>
-                  <button className="btn btn-primary">Pndodoncja</button>
+                  <button className="btn btn-primary">Pedodoncja</button>
               </div>
               <div className="btn-group" className="text-center" data-toggle="buttons">
                   <button className="btn btn-warning">Chirurgia</button>
